@@ -1,3 +1,4 @@
+import shlex
 import unittest
 
 
@@ -26,6 +27,14 @@ def advent_day_one_2(filename):
             initial_sum = tmp_initial_sum
         return counter
 
+
+def advent_day_two_1(filename):
+    with open(filename, 'r') as file:
+        lines = file.readlines()
+        lines = [tuple(x.split()) for x in lines]
+        print(lines[0])
+
+advent_day_two_1('advent_day_two_test.txt')
 
 class TestAdventCode(unittest.TestCase):
     def test_day_one(self):
